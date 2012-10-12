@@ -1,7 +1,6 @@
 <?php
 
 /**
- * Reddit
  * Gets information about a reddit user.
  *
  * @author   Devin Clark <dclarkdesign@gmail.com>
@@ -20,9 +19,7 @@ class Reddit {
 	private $cake_day;
 
 	/**
-	 * Constructor
-	 *
-	 * @param string    $username The username of the reddit user.
+	 * @param string     The username of the reddit user.
 	 * @access public
 	 *
 	 */
@@ -54,7 +51,7 @@ class Reddit {
 	/**
 	 * Sets the username if a value is passed, returns it if no value is passed.
 	 *
-	 * @param string    $val Sets the username.
+	 * @param string     Sets the username.
 	 * @access public
 	 * @return string    the username.
 	 */
@@ -68,7 +65,7 @@ class Reddit {
 	/**
 	 * Sets the linkKarma if a value is passed, returns it if no value is passed.
 	 *
-	 * @param int     $val Sets the link karma.
+	 * @param int      Sets the link karma.
 	 * @access public
 	 * @return int     the user's link karma.
 	 */
@@ -82,7 +79,7 @@ class Reddit {
 	/**
 	 * Sets the commentKarma if a value is passed, returns it if no value is passed.
 	 *
-	 * @param int     $val Sets the comment karma.
+	 * @param int      Sets the comment karma.
 	 * @access public
 	 * @return int     the user's comment karma.
 	 */
@@ -96,7 +93,7 @@ class Reddit {
 	/**
 	 * Determines whether the user currently has mail.
 	 *
-	 * @param boolean     $val sets the value.
+	 * @param boolean      sets the value.
 	 * @access public
 	 * @return boolean     Whether the user has mail.
 	 */
@@ -110,7 +107,7 @@ class Reddit {
 	/**
 	 * Sets the Unix datetime of when the account was created if a value is passed, returns it if no value is passed.
 	 *
-	 * @param int    $val sets the time.
+	 * @param int     sets the time.
 	 * @access public
 	 * @return int    the Unix datetime in which the account was created.
 	 */
@@ -134,12 +131,12 @@ class Reddit {
 	}
 
 	/**
-	* Uses cURL to get the contents of the JSON API files.
-	*
-	* @param string    $url The URL of a file.
-	* @access public
-	* @return string    The contents of the file passed in $url.
-	*/
+	 * Uses cURL to get the contents of the JSON API files.
+	 *
+	 * @param string     The URL of a file.
+	 * @access public
+	 * @return string    The contents of the file passed in .
+	 */
 	public function getFeedData($url) {
 		$ch = curl_init();
 		$timeout = 5;
@@ -152,14 +149,14 @@ class Reddit {
 	}
 
 	/**
-	* Takes the contents of a remote JSON file and stores it in a cache file. This file is refreshed every 360 seconds by default and can be changed with the `$time` parameter.
-	*
-	* @param string    $filename The name you choose for the cached file.
-	* @param string    $feed_url The remote url of the feed to be cached.
-	* @param int   $time     The number of seconds to cache the file for. Default is 360 (6 minutes).
-	* @access public
-	* @return string    The contents of the feed or file.
-	*/
+	 * Takes the contents of a remote JSON file and stores it in a cache file. This file is refreshed every 360 seconds by default and can be changed with the `$time` parameter.
+	 *
+	 * @param string     The name you choose for the cached file.
+	 * @param string     The remote url of the feed to be cached.
+	 * @param int        The number of seconds to cache the file for. Default is 360 (6 minutes).
+	 * @access public
+	 * @return string    The contents of the feed or file.
+	 */
 	public function cacheFeedData($filename, $feed_url, $time = 360) {
 		$cache_time = $time;
 
