@@ -16,9 +16,9 @@ Takes the contents of a remote JSON file and stores it in a cache file. This fil
 
 More Info:
 
-   - **Param:** string     The name you choose for the cached file. 
-   - **Param:** string     The remote url of the feed to be cached. 
-   - **Param:** int        The number of seconds to cache the file for. Default is 360 (6 minutes). 
+   - **Param:** string     $filename The name you choose for the cached file. 
+   - **Param:** string     $feed_url The remote url of the feed to be cached. 
+   - **Param:** int        $time The number of seconds to cache the file for. Default is 360 (6 minutes). 
    - **Access:** public 
    - **Return:** string    The contents of the feed or file.
 
@@ -29,7 +29,7 @@ Sets the Unix datetime of when the account was created if a value is passed, ret
 
 More Info:
 
-   - **Param:** int     sets the time. 
+   - **Param:** int     $val Sets the time. 
    - **Access:** public 
    - **Return:** int    the Unix datetime in which the account was created.
 
@@ -40,7 +40,7 @@ Sets the commentKarma if a value is passed, returns it if no value is passed.
 
 More Info:
 
-   - **Param:** int      Sets the comment karma. 
+   - **Param:** int      $val Sets the comment karma. 
    - **Access:** public 
    - **Return:** int     the user's comment karma.
 
@@ -61,7 +61,7 @@ Uses cURL to get the contents of the JSON API files.
 
 More Info:
 
-   - **Param:** string     The URL of a file. 
+   - **Param:** string     $url The URL of a file. 
    - **Access:** public 
    - **Return:** string    The contents of the file passed in .
 
@@ -81,7 +81,7 @@ Determines whether the user currently has mail.
 
 More Info:
 
-   - **Param:** boolean      sets the value. 
+   - **Param:** boolean      $val Sets the value. 
    - **Access:** public 
    - **Return:** boolean     Whether the user has mail.
 
@@ -92,7 +92,7 @@ Sets the linkKarma if a value is passed, returns it if no value is passed.
 
 More Info:
 
-   - **Param:** int      Sets the link karma. 
+   - **Param:** int      $val Sets the link karma. 
    - **Access:** public 
    - **Return:** int     the user's link karma.
 
@@ -103,12 +103,12 @@ Sets the username if a value is passed, returns it if no value is passed.
 
 More Info:
 
-   - **Param:** string     Sets the username. 
+   - **Param:** string     $val Sets the username. 
    - **Access:** public 
    - **Return:** string    the username.
 
 __construct($username)
 ----------------------
 
-   - **Param:** string     The username of the reddit user. 
+   - **Param:** string     $username The username of the reddit user. 
    - **Access:** public
