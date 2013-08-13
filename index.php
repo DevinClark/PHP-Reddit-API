@@ -11,9 +11,9 @@ echo "Username: " . $reddit->username() . "<br />";
 echo $reddit->linkKarma() . ":" . $reddit->commentKarma() . "<br />";
 echo $reddit->getDaysUntilCakeDay() . " Days" . "<br />";
 
-$sub = new Subreddit("funny");
-echo $sub->url();
-$sub->getRawJSON();
+//$sub = new Subreddit("funny");
+//echo $sub->url();
+//$sub->getRawJSON();
 ?>
 </body>
 </html>
