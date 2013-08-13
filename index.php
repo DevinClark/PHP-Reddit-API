@@ -4,13 +4,12 @@
 <?php
 include_once("Reddit.php");
 include_once("Subreddit.php");
-$reddit = new Reddit("TheDevin");
+$reddit = new Reddit("reddit");
 
 //echo $reddit->getRawJSON();
 echo "Username: " . $reddit->username() . "<br />";
-echo "Link Karma: " . $reddit->linkKarma() . "<br />";
-echo "Comment Karma: " . $reddit->commentKarma() . "<br />";
-echo "Days until Cake Day: " . $reddit->getDaysUntilCakeDay() . "<br />";
+echo $reddit->linkKarma() . ":" . $reddit->commentKarma() . "<br />";
+echo $reddit->getDaysUntilCakeDay() . " Days" . "<br />";
 
 $sub = new Subreddit("funny");
 echo $sub->url();
