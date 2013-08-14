@@ -44,6 +44,16 @@ More Info:
    - **Access:** public 
    - **Return:** int     the user's comment karma.
 
+data()
+------
+
+Returns the data from the Reddit API.
+
+More Info:
+
+   - **Access:** public 
+   - **Return:** string    the data returned from the Reddit API.
+
 getDaysUntilCakeDay()
 ---------------------
 

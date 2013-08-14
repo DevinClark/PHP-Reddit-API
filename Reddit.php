@@ -63,6 +63,16 @@ class Reddit {
 	}
 
 	/**
+	 * Returns the data from the Reddit API.
+	 *
+	 * @access public
+	 * @return string    the data returned from the Reddit API.
+	 */
+	public function data() {
+		return $this->obj;
+	}
+
+	/**
 	 * Sets the linkKarma if a value is passed, returns it if no value is passed.
 	 *
 	 * @param int      $val Sets the link karma.
