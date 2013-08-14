@@ -125,8 +125,21 @@ class Reddit {
 	 * @return int    Number of days until the user's cake day.
 	 */
 	public function getDaysUntilCakeDay() {
-		$next_cake_day = strtotime( "+1 year", $this->cake_day );
-		$days_left = floor( ( $next_cake_day - time() ) /60/60/24 );
+		$today = new DateTime("now");
+
+		$next_cake_day = new DateTime();
+		$next_cake_day->setTimestamp($this->cake_day);
+		
+		// Increment the DateTime
+		$year_difference = $next_cake_day->diff($today)->y;
+		$next_cake_day->add(new DateInterval("P" . $year_difference . "Y"));
+
+		// Add another year if it has passed.
+		if ($next_cake_day < new DateTime()) {
+			$next_cake_day->add(new DateInterval("P1Y"));
+		}
+
+		$days_left = $today->diff($next_cake_day)->format("%a");
 		return $days_left;
 	}
 
